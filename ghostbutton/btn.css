@@ -1,0 +1,235 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background: #333;
+}
+
+.box{
+	width: 1000px;
+	height: 280px;
+	margin: 50px auto;
+}
+
+.box .link{
+	width: 205px;
+	height: 280px;
+	margin:0 20px;
+	float: left;
+	position: relative;
+}
+
+/*
+transition-property 	规定设置过渡效果的 CSS 属性的名称。
+transition-duration 	规定完成过渡效果需要多少秒或毫秒。
+transition-timing-function 	规定速度效果的速度曲线。
+transition-delay 	定义过渡效果何时开始。
+ */
+.link .icon{
+	display: inline-block;
+	width:100%;
+	height: 190px;
+	transition:0.2s linear;
+	-ms-transition:0.2s linear;
+	-moz-transition:0.2s linear;
+	-webkit-transition:0.2s linear;
+	-o-transition:0.2s linear;
+
+}
+
+.link-game .icon{
+	background: url("mission.png") no-repeat center center;
+}
+
+.link-flay .icon{
+	background: url("play.png") no-repeat center center;
+}
+
+.link-map .icon{
+	background: url("touch.png") no-repeat center center;
+}
+
+/*
+none 	定义不进行转换。 	测试
+matrix(n,n,n,n,n,n) 	定义 2D 转换，使用六个值的矩阵。 	测试
+matrix3d(n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n) 	定义 3D 转换，使用 16 个值的 4x4 矩阵。 	
+translate(x,y) 	定义 2D 转换。 	测试
+translate3d(x,y,z) 	定义 3D 转换。 	
+translateX(x) 	定义转换，只是用 X 轴的值。 	测试
+translateY(y) 	定义转换，只是用 Y 轴的值。 	测试
+translateZ(z) 	定义 3D 转换，只是用 Z 轴的值。 	
+scale(x,y) 	定义 2D 缩放转换。 	测试
+scale3d(x,y,z) 	定义 3D 缩放转换。 	
+scaleX(x) 	通过设置 X 轴的值来定义缩放转换。 	测试
+scaleY(y) 	通过设置 Y 轴的值来定义缩放转换。 	测试
+scaleZ(z) 	通过设置 Z 轴的值来定义 3D 缩放转换。 	
+rotate(angle) 	定义 2D 旋转，在参数中规定角度。 	测试
+rotate3d(x,y,z,angle) 	定义 3D 旋转。 	
+rotateX(angle) 	定义沿着 X 轴的 3D 旋转。 	测试
+rotateY(angle) 	定义沿着 Y 轴的 3D 旋转。 	测试
+rotateZ(angle) 	定义沿着 Z 轴的 3D 旋转。 	测试
+skew(x-angle,y-angle) 	定义沿着 X 和 Y 轴的 2D 倾斜转换。 	测试
+skewX(angle) 	定义沿着 X 轴的 2D 倾斜转换。 	测试
+skewY(angle) 	定义沿着 Y 轴的 2D 倾斜转换。 	测试
+perspective(n) 	为 3D 转换元素定义透视视图。 	测试
+
+浏览器支持
+-ms-transform:rotate(); 
+-moz-transform:rotate(); 
+-webkit-transform:rotate(); 
+-o-transform:rotate(); 
+
+
+ */
+.link .icon:hover{
+	transition:rotate(360deg) scale(1.2);
+	-ms-transform:rotate(360deg) scale(1.2); 
+	-moz-transform:rotate(360deg) scale(1.2); 
+	-webkit-transform:rotate(360deg) scale(1.2); 
+	-o-transform:rotate(360deg) scale(1.2); 
+}
+/*
+box-sizing
+content-box 	
+	这是由 CSS2.1 规定的宽度高度行为。
+	宽度和高度分别应用到元素的内容框。
+	在宽度和高度之外绘制元素的内边距和边框。
+border-box 	
+	为元素设定的宽度和高度决定了元素的边框盒。
+	就是说，为元素指定的任何内边距和边框都将在已设定的宽度和高度内进行绘制。
+	通过从已设定的宽度和高度分别减去边框和内边距才能得到内容的宽度和高度。
+inherit 	
+	规定应从父元素继承 box-sizing 属性的值。
+ */
+.button{
+	display: block;
+	width:180px;
+	height: 50px;
+	line-height: 50px;
+	color: #2DCB78;
+	font-weight:bolder;
+	border: 2px solid rgba(255,255,255,0.8);
+	padding-left:20px;
+	margin:0 auto;
+	box-sizing: border-box;
+	-ms-box-sizing: border-box; 
+	-moz-box-sizing: border-box; 
+	-webkit-box-sizing: border-box; 
+	-o-box-sizing: border-box;
+	background: url(allow.png) no-repeat 130px center;
+	position: relative;
+	transition:0.4s ease;
+	-ms-transition:0.4s ease;
+	-moz-transition:0.4s ease;
+	-webkit-transition:0.4s ease;
+	-o-transition:0.4s ease;
+}
+
+.button .line{
+	display: block;
+	position: absolute;
+	background: none;
+	transition:0.4s ease;
+	-ms-transition:0.4s ease;
+	-moz-transition:0.4s ease;
+	-webkit-transition:0.4s ease;
+	-o-transition:0.4s ease;
+}
+
+.button:hover{
+	border: 2px solid rgba(255,255,255,1);
+	background-position: 140px center; 
+}
+
+.button:hover .line{
+	background: #fff;
+}
+
+/*
+top  高度不变   宽度（0-盒子宽） 从左到右
+ */
+.button .line-top{
+	height: 2px;
+	width: 0px;
+	left: -110%;
+	top: -2px;
+}
+
+.button:hover .line-top{
+	padding-right:2px;
+	width: 100%;
+	left: -1px;
+	/*left: -2px;*/
+}
+
+.button .line-bottom{
+	height: 2px;
+	width: 0px;
+	right: -110%;
+	bottom: -2px;
+}
+
+.button:hover .line-bottom{
+	padding-left:2px;
+	width: 100%;
+	right: -1px;
+}
+
+.button .line-left{
+	width: 2px;
+	height: 0px;
+	left: -2px;
+	bottom: -110%;
+}
+
+.button:hover .line-left{
+	padding-top:2px;
+	height: 100%;
+	bottom: -1px;
+}
+
+.button .line-right{
+	height: 0px;
+	width: 2px;
+	right: -2px;
+	top: -110%;
+}
+
+.button:hover .line-right{
+	padding-bottom:2px;
+	height: 100%;
+	top: -1px;
+}
+
+.box .tip{
+	position: absolute;
+	padding: 0px 14px;
+	height: 35px;
+	line-height: 35px;
+	background: #2DCB70;
+	color: #fff;
+	top: 160px;
+	font-size: 16px;
+	font-weight: normal;
+	text-transform: none;
+	margin: 0 auto;
+	border-radius: 3px;
+	opacity: 0;
+}
+
+.tip em{
+	font-style: normal;
+}
+
+.tip span{
+	position: absolute;;
+	width: 0;
+	height: 0;
+	overflow: hidden;
+	border: 7px solid transparent;
+	border-top-color: #2DCB70;
+	left: 50%;
+	margin-left: -3px;
+	bottom: -13px;
+}

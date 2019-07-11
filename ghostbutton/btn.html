@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>幽灵按钮</title>
+	<link rel="stylesheet" href="btn.css">
+	<script src="jquery-3.0.0.min.js"></script>
+	<script src="btn.js"></script>
+</head>
+<!--主要知识点
+	1.transform  transform 属性向元素应用 2D 或 3D 转换。该属性允许我们对元素进行旋转、缩放、移动或倾斜。
+	2.transition 把鼠标指针放到 div 元素上，其宽度会从 100px 逐渐变为 300px：
+	3.box-sizing box-sizing 属性允许您以特定的方式定义匹配某个区域的特定元素
+	4.border-redius border-radius 属性是一个简写属性，用于设置四个 border-*-radius 属性。
+                      提示：该属性允许您为元素添加圆角边框！
+-->
+<body>
+	<div class="box">
+		<div class="link link-game">
+			<span class="icon"></span>
+			<a href="#" class="button" data-title="王者荣耀">
+				<span class="line line-top"></span>
+				<span class="line line-bottom"></span>
+				<span class="line line-left"></span>
+				<span class="line line-right"></span>
+				GAME-A
+			</a>
+		</div>
+		<div class="link link-flay">
+			<span class="icon"></span>
+			<a href="#" class="button" data-title="穿越火线">
+				<span class="line line-top"></span>
+				<span class="line line-bottom"></span>
+				<span class="line line-left"></span>
+				<span class="line line-right"></span>
+				FLAY-B
+			</a>
+		</div>
+		<div class="link link-map">
+			<span class="icon"></span>
+			<a href="#" class="button" data-title="京东食尸鬼">
+				<span class="line line-top"></span>
+				<span class="line line-bottom"></span>
+				<span class="line line-left"></span>
+				<span class="line line-right"></span>
+				MAP-C
+			</a>
+		</div>
+		<div class="tip">
+			<em></em>
+			<span></span>
+		</div>
+	</div>
+</body>
+</html>
